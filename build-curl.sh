@@ -4,7 +4,7 @@ set -ex
 
 export TARGET_HOST=arm-linux-gnueabihf
 
-export SSL_DIR=$PWD/openssl/build/raspi
+export SSL_DIR=$PWD/openssl/build
 
 pushd curl
 
@@ -51,13 +51,13 @@ export STRIP=$TARGET_HOST-strip
 
 ./configure --host=$TARGET_HOST \
             --target=$TARGET_HOST \
-            --prefix=$PWD/build/raspi \
+            --prefix=$PWD/build \
             --with-ssl=$SSL_DIR $ARGUMENTS
 
 make -j5
 make install
 make clean
-mkdir -p ../build/curl
-cp -R $PWD/build/raspi ../build/curl/
+mkdir -p ../build
+cp -R $PWD/build ..
 
 popd
