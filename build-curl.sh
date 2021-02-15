@@ -6,6 +6,8 @@ export TARGET_HOST=arm-linux-gnueabihf
 
 export SSL_DIR=$PWD/openssl/build
 
+export OPENSSL_ENABLED=1
+
 pushd curl
 
 autoreconf -fi
