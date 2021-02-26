@@ -2,7 +2,7 @@
 
 set -ex
 
-git clone --depth 1 --single-branch -b OpenSSL_1_1_1i https://github.com/openssl/openssl.git
+git clone --depth 1 --single-branch -b OpenSSL_1_1_1j https://github.com/openssl/openssl.git
 
 pushd openssl
 git submodule update --init --recursive --recommend-shallow --depth 1
